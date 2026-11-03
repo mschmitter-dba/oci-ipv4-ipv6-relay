@@ -1,0 +1,13 @@
+# /etc/systemd/system/51820_socat_wireguard.service
+[Unit]
+Description=socat Service 51820 WireGuard VPN Clients
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+DynamicUser=yes
+ExecStart=/etc/socat/51820_socat_wireguard
+Restart=always
+RestartSec=5
+[Install]
+WantedBy=multi-user.target
