@@ -1,0 +1,16 @@
+# /etc/systemd/system/443_socat.service
+[Unit]
+Description=socat Service 443
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+DynamicUser=yes
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/etc/socat/443_socat
+Restart=always
+RestartSec=5
+[Install]
+WantedBy=multi-user.target
