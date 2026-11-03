@@ -1,0 +1,10 @@
+# Local configuration, credentials and diagnostics
+.env
+.env.*
+*.key
+*.pem
+*.pcap
+*.pcapng
+*.log
+local/
+.DS_Store
