@@ -1,0 +1,4 @@
+#!/bin/bash
+# /etc/socat/443_socat
+# Socat script: TCP port 443 for SSH
+/usr/bin/socat -T 120 TCP4-LISTEN:443,fork,reuseaddr TCP6:pi.dyn.foo.bar:22
