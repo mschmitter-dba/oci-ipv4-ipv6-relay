@@ -1,0 +1,4 @@
+#!/bin/bash
+# /etc/socat/51820_socat_wireguard
+# Socat script: UDP port 51820 for WireGuard
+/usr/bin/socat -T 120 UDP4-LISTEN:51820,fork,reuseaddr UDP6:corerouter.dyn.foo.bar:51820
